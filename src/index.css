@@ -1,0 +1,47 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer components {
+
+  .bento-item-background-gradient {
+    @apply bg-gradient-to-b from-white
+  }
+
+  .bento-item-background {
+    @apply bg-gradient-to-b from-white to-white 
+            rounded-2xl drop-shadow-lg flex flex-col gap-1
+            hover:-translate-y-2 hover:drop-shadow-lg-primary  hover:to-primary
+            transition-all duration-150 ease-out
+            cursor-pointer;
+  };
+
+  .bento-item-cover {
+    @apply bg-white size-[calc(100%-4px)] m-auto rounded-[14px];
+  };
+
+  .bento-item-image {
+    @apply absolute size-full hover:size-[calc(100%-4px)] m-auto top-0 bottom-0 left-0 right-0 transition-all duration-150 ease-out;
+  };
+
+  .bento-item-text {
+    @apply absolute text-black bottom-0 mb-4 font-semibold text-2xl;
+  };
+
+}
+
+::-webkit-scrollbar {
+  @apply w-[10px]
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900 rounded-md
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#111111] rounded-md
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#0c0c0c]
+}
